@@ -1,0 +1,95 @@
+@include respond(tab-port) {
+  .header {
+    width: 100%;
+    height: 20vh;
+    max-width: 160rem;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 2rem 0;
+
+    @include respond(desktop) {
+      width: 100vw;
+      max-width: 160rem;
+    }
+
+    &__wrapper {
+      display: none;
+    }
+
+    &__nav {
+      display: block;
+      flex: 1 1 100%;
+    }
+
+    &__nav-links {
+      display: flex;
+      justify-content: space-around;
+      list-style: none;
+    }
+
+    &__nav-links--items {
+      display: block;
+      width: 100%;
+      text-align: center;
+      position: relative;
+
+      &:hover img {
+        transform: scale(1);
+        transform-origin: left;
+      }
+
+      &:hover div {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+
+    &__nav-links--items--item {
+      display: block;
+      font-size: 2.9rem;
+      font-family: $font-Titels;
+      text-decoration: none;
+      color: $color-Primary;
+      padding: 1rem 1.5rem;
+      font-weight: 400;
+      position: relative;
+      text-transform: capitalize;
+    }
+
+    &__nav-links--items--item-img {
+      display: block;
+      position: absolute;
+      width: 80%;
+      top: 40%;
+      left: 15%;
+      transform: scale(0);
+      transform-origin: left;
+      transition: transform 0.3s ease-out;
+    }
+
+    &__nav-links--items--dropdown {
+      display: block;
+      position: absolute;
+      top: 70%;
+      left: 42%;
+      width: 100%;
+      padding: 0.4rem 0.85rem;
+      text-align: left;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.3s ease-out, visibility 0.3s ease-out;
+
+      &-dropdown-link {
+        font-size: 2.25rem;
+        display: block;
+        text-decoration: none;
+        font-family: $font-Primary;
+        color: $color-Primary;
+        font-weight: 400;
+      }
+    }
+  }
+}
