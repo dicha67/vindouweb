@@ -1,0 +1,159 @@
+.container__opening {
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+
+  @include respond(tab-port) {
+    flex-direction: row;
+    max-width: 90rem;
+  }
+
+  @include respond(desktop) {
+    max-width: 180rem;
+  }
+
+  &-img {
+    display: block;
+    width: 100vw;
+    margin: 0 auto;
+    padding: 4rem 0;
+
+    @include respond(tab-port) {
+      margin: 0;
+      width: 100%;
+      flex: 1;
+    }
+  }
+
+  &-img-foto {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+
+    @include respond(tab-port) {
+      margin-left: 0;
+      margin-right: 0;
+      width: 110%;
+      position: relative;
+      left: -5rem;
+    }
+
+    @include respond(desktop) {
+      width: 100%;
+      position: relative;
+      left: 4rem;
+    }
+  }
+
+  &-body {
+    width: 90vw;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    position: relative;
+    top: 2rem;
+
+    @include respond(tab-port) {
+      width: 0;
+      flex: 1;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      top: -1rem;
+      left: 4rem;
+    }
+
+    @include respond(desktop) {
+      left: 0;
+      top: -4rem;
+    }
+  }
+
+  &-body--img {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+  }
+
+  &-body--img-haakje {
+    @include respond(tab-port) {
+      transform: scale(1.1);
+    }
+  }
+
+  &-body-address {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    position: relative;
+  }
+
+  &-body-address--title {
+    font-family: $font-Titels;
+    color: $color-Primary;
+    font-weight: 400;
+    margin-left: 0.5rem;
+    font-size: 2.5rem;
+    position: relative;
+    top: 2rem;
+    left: -0.5rem;
+
+    @include respond(tab-port) {
+      font-size: 3.2rem;
+      position: relative;
+      left: -5rem;
+      top: -4.5rem;
+    }
+
+    @include respond(desktop) {
+      font-size: 3.4rem;
+      top: -4rem;
+      left: -5rem;
+    }
+  }
+
+  &-body-address--paragraaf {
+    font-size: 1.7rem;
+    font-family: $font-Primary;
+    color: $color-Primary;
+    font-weight: 300;
+    margin-left: 3rem;
+    margin-top: 4rem;
+    line-height: 1.2;
+    letter-spacing: 0.1px;
+
+    @include respond(tab-port) {
+      font-size: 2.2rem;
+      margin-top: 0;
+      margin-left: 0;
+      position: relative;
+      top: -2rem;
+      left: -0.5rem;
+    }
+
+    @include respond(desktop) {
+      font-size: 2.4rem;
+      margin-top: 0;
+      margin-left: 0;
+      position: relative;
+      top: -1rem;
+      left: 0;
+    }
+  }
+
+  &-body-address--paragraaf .p1,
+  &-body-address--paragraaf .p2,
+  &-body-address--paragraaf .p3 {
+    padding-bottom: 0.8rem;
+
+    @include respond(tab-port) {
+      padding-bottom: 1rem;
+    }
+  }
+}

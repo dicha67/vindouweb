@@ -49,7 +49,7 @@
 
     &__nav-links--items--item {
       display: block;
-      font-size: 2.9rem;
+      font-size: 3.4rem;
       font-family: $font-Titels;
       text-decoration: none;
       color: $color-Primary;
@@ -85,6 +85,7 @@
       &-dropdown-link {
         font-size: 2.25rem;
         display: block;
+        padding: 0.2rem 0.5rem;
         text-decoration: none;
         font-family: $font-Primary;
         color: $color-Primary;

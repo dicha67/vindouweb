@@ -1,0 +1,87 @@
+.section-footer {
+  display: none;
+
+  @include respond(tab-port) {
+    display: block;
+  }
+}
+
+.mobile__footer {
+  width: 100vw;
+  height: 10vh;
+  position: relative;
+
+  @include respond(tab-port) {
+    display: none;
+  }
+
+  &-horizontal {
+    width: 100%;
+    height: 2px;
+    background-color: $color-PrimaryLight;
+  }
+
+  &-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0.8rem 1rem;
+  }
+
+  &-container-body {
+    display: flex;
+  }
+
+  &-container-body--left {
+    padding: 0 0.5rem;
+  }
+
+  &-container-body--left p {
+    font-family: $font-Primary;
+    color: $color-Primary;
+    font-size: 1.1rem;
+    line-height: 1.4;
+    font-weight: 400;
+  }
+
+  &-container-body--vertical {
+    display: block;
+    width: 2px;
+    height: 6rem;
+    background-color: $color-PrimaryLight;
+  }
+
+  &-container-body--right {
+    padding: 0 0.5rem;
+  }
+
+  &-container-body--right .h10 {
+    font-family: $font-Primary;
+    color: $color-Primary;
+    font-size: 1.1rem;
+    font-weight: 400;
+    line-height: 1.4;
+  }
+
+  &-container-body--right-title {
+    font-family: $font-Titels;
+    font-size: 1.1rem;
+    font-weight: 300;
+    line-height: 1.4;
+  }
+
+  &-container--social {
+    display: flex;
+    justify-content: space-around;
+    width: 3rem;
+    position: relative;
+    top: 0.5rem;
+    right: 0.5rem;
+  }
+
+  &-container--social a i {
+    color: $color-Primary;
+    font-size: 1.1rem;
+  }
+}

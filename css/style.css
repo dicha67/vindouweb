@@ -6,19 +6,39 @@
   box-sizing: inherit; }
 
 html {
-  font-size: 62.5%; }
-  @media only screen and (min-width: 85em) {
-    html {
-      font-size: 75%; } }
-  @media only screen and (min-width: 75em) {
-    html {
-      font-size: 56.25%; } }
+  font-size: 62.5%;
+  /*@include respond(desktop) {
+    font-size: 65%; // 1rem = 12 px
+  }*/ }
   @media only screen and (min-width: 56.25em) {
     html {
       font-size: 50%; } }
+  @media only screen and (min-width: 75em) {
+    html {
+      font-size: 56.25%; } }
 
 body {
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  overflow-x: hidden;
+  animation: fadeInAnimation ease 3s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards; }
+
+ul {
+  list-style: none; }
+
+a {
+  text-decoration: none; }
+
+a[href^="tel"] {
+  text-decoration: inherit;
+  color: #101111; }
+
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
 
 .header {
   width: 100%;
@@ -154,7 +174,7 @@ body {
         visibility: visible; }
     .header__nav-links--items--item {
       display: block;
-      font-size: 2.9rem;
+      font-size: 3.4rem;
       font-family: "Unica One", cursive;
       text-decoration: none;
       color: #161717;
@@ -185,7 +205,497 @@ body {
       .header__nav-links--items--dropdown-dropdown-link {
         font-size: 2.25rem;
         display: block;
+        padding: 0.2rem 0.5rem;
         text-decoration: none;
         font-family: "Dosis", sans-serif;
         color: #161717;
         font-weight: 400; } }
+
+.mobile__wrapper {
+  display: flex;
+  width: 80vw;
+  height: 30vh;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem auto; }
+  .mobile__wrapper-logo {
+    width: 60%; }
+  @media only screen and (min-width: 56.25em) {
+    .mobile__wrapper {
+      display: none; } }
+
+.logo {
+  display: none; }
+  @media only screen and (min-width: 56.25em) {
+    .logo {
+      width: 100vw;
+      height: 50vh;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+      .logo__img {
+        transform: scale(0.5); } }
+    @media only screen and (min-width: 56.25em) and (min-width: 75em) {
+      .logo__img {
+        transform: scale(0.7); } }
+
+.container__gevel {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column; }
+  @media only screen and (min-width: 56.25em) {
+    .container__gevel {
+      flex-direction: row-reverse;
+      max-width: 90rem; } }
+  @media only screen and (min-width: 85em) {
+    .container__gevel {
+      max-width: 180rem; } }
+  .container__gevel-img {
+    display: block;
+    width: 70vw;
+    margin: 0 auto;
+    padding: 4rem 0; }
+    @media only screen and (min-width: 56.25em) {
+      .container__gevel-img {
+        margin: 0;
+        width: 100%;
+        flex: 1; } }
+  .container__gevel-img-foto {
+    display: block;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto; }
+    @media only screen and (min-width: 56.25em) {
+      .container__gevel-img-foto {
+        margin-left: 0;
+        margin-right: 0;
+        width: 100%;
+        position: relative;
+        left: 5rem; } }
+    @media only screen and (min-width: 85em) {
+      .container__gevel-img-foto {
+        width: 80%;
+        position: relative;
+        left: 4rem; } }
+  .container__gevel-body {
+    width: 90vw;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr; }
+    @media only screen and (min-width: 56.25em) {
+      .container__gevel-body {
+        width: 0;
+        flex: 1;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        top: 4.8rem; } }
+  .container__gevel-body--img {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2; }
+  @media only screen and (min-width: 56.25em) {
+    .container__gevel-body--img-haakje {
+      transform: scale(1.1); } }
+  .container__gevel-body-address {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    position: relative; }
+  .container__gevel-body-address--title span {
+    display: none; }
+    @media only screen and (min-width: 56.25em) {
+      .container__gevel-body-address--title span {
+        display: inline-block; } }
+  .container__gevel-body-address--title {
+    font-family: "Unica One", cursive;
+    color: #161717;
+    font-weight: 400;
+    margin-left: 0.5rem;
+    font-size: 2.5rem;
+    position: relative;
+    top: 1rem; }
+    @media only screen and (min-width: 56.25em) {
+      .container__gevel-body-address--title {
+        font-size: 3.2rem;
+        position: relative;
+        left: -6rem;
+        top: -4.5rem; } }
+    @media only screen and (min-width: 85em) {
+      .container__gevel-body-address--title {
+        font-size: 3.4rem;
+        top: -3rem;
+        left: -6rem; } }
+  .container__gevel-body-address--paragraaf {
+    font-size: 1.7rem;
+    font-family: "Dosis", sans-serif;
+    color: #161717;
+    font-weight: 300;
+    margin-left: 3rem;
+    margin-top: 2rem;
+    line-height: 1.2;
+    letter-spacing: 0.1px; }
+    @media only screen and (min-width: 56.25em) {
+      .container__gevel-body-address--paragraaf {
+        font-size: 2.2rem;
+        margin-top: 0;
+        margin-left: 0;
+        position: relative;
+        top: -2rem;
+        left: -0.5rem; } }
+    @media only screen and (min-width: 85em) {
+      .container__gevel-body-address--paragraaf {
+        font-size: 2.4rem;
+        margin-top: 0;
+        margin-left: 0;
+        position: relative;
+        top: -1rem;
+        left: 0; } }
+  .container__gevel-body-address--paragraaf .p1,
+  .container__gevel-body-address--paragraaf .p2,
+  .container__gevel-body-address--paragraaf .p3 {
+    padding-bottom: 0.8em; }
+    @media only screen and (min-width: 56.25em) {
+      .container__gevel-body-address--paragraaf .p1,
+      .container__gevel-body-address--paragraaf .p2,
+      .container__gevel-body-address--paragraaf .p3 {
+        padding-bottom: 1rem; } }
+  .container__gevel-body-address--paragraaf .p1 .a1 {
+    border: none;
+    background: transparent;
+    font-weight: 300;
+    font-size: 1.6rem;
+    position: relative;
+    top: 0.2rem;
+    text-decoration: none;
+    cursor: pointer;
+    outline: none; }
+    @media only screen and (min-width: 56.25em) {
+      .container__gevel-body-address--paragraaf .p1 .a1 {
+        font-size: 2.4rem;
+        margin-top: -0.5rem;
+        position: relative;
+        left: 0;
+        top: 0.5rem; } }
+    @media only screen and (min-width: 85em) {
+      .container__gevel-body-address--paragraaf .p1 .a1 {
+        left: 0; } }
+
+.container__opening {
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column; }
+  @media only screen and (min-width: 56.25em) {
+    .container__opening {
+      flex-direction: row;
+      max-width: 90rem; } }
+  @media only screen and (min-width: 85em) {
+    .container__opening {
+      max-width: 180rem; } }
+  .container__opening-img {
+    display: block;
+    width: 100vw;
+    margin: 0 auto;
+    padding: 4rem 0; }
+    @media only screen and (min-width: 56.25em) {
+      .container__opening-img {
+        margin: 0;
+        width: 100%;
+        flex: 1; } }
+  .container__opening-img-foto {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto; }
+    @media only screen and (min-width: 56.25em) {
+      .container__opening-img-foto {
+        margin-left: 0;
+        margin-right: 0;
+        width: 110%;
+        position: relative;
+        left: -5rem; } }
+    @media only screen and (min-width: 85em) {
+      .container__opening-img-foto {
+        width: 100%;
+        position: relative;
+        left: 4rem; } }
+  .container__opening-body {
+    width: 90vw;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    position: relative;
+    top: 2rem; }
+    @media only screen and (min-width: 56.25em) {
+      .container__opening-body {
+        width: 0;
+        flex: 1;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        top: -1rem;
+        left: 4rem; } }
+    @media only screen and (min-width: 85em) {
+      .container__opening-body {
+        left: 0;
+        top: -4rem; } }
+  .container__opening-body--img {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2; }
+  @media only screen and (min-width: 56.25em) {
+    .container__opening-body--img-haakje {
+      transform: scale(1.1); } }
+  .container__opening-body-address {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    position: relative; }
+  .container__opening-body-address--title {
+    font-family: "Unica One", cursive;
+    color: #161717;
+    font-weight: 400;
+    margin-left: 0.5rem;
+    font-size: 2.5rem;
+    position: relative;
+    top: 2rem;
+    left: -0.5rem; }
+    @media only screen and (min-width: 56.25em) {
+      .container__opening-body-address--title {
+        font-size: 3.2rem;
+        position: relative;
+        left: -5rem;
+        top: -4.5rem; } }
+    @media only screen and (min-width: 85em) {
+      .container__opening-body-address--title {
+        font-size: 3.4rem;
+        top: -4rem;
+        left: -5rem; } }
+  .container__opening-body-address--paragraaf {
+    font-size: 1.7rem;
+    font-family: "Dosis", sans-serif;
+    color: #161717;
+    font-weight: 300;
+    margin-left: 3rem;
+    margin-top: 4rem;
+    line-height: 1.2;
+    letter-spacing: 0.1px; }
+    @media only screen and (min-width: 56.25em) {
+      .container__opening-body-address--paragraaf {
+        font-size: 2.2rem;
+        margin-top: 0;
+        margin-left: 0;
+        position: relative;
+        top: -2rem;
+        left: -0.5rem; } }
+    @media only screen and (min-width: 85em) {
+      .container__opening-body-address--paragraaf {
+        font-size: 2.4rem;
+        margin-top: 0;
+        margin-left: 0;
+        position: relative;
+        top: -1rem;
+        left: 0; } }
+  .container__opening-body-address--paragraaf .p1,
+  .container__opening-body-address--paragraaf .p2,
+  .container__opening-body-address--paragraaf .p3 {
+    padding-bottom: 0.8rem; }
+    @media only screen and (min-width: 56.25em) {
+      .container__opening-body-address--paragraaf .p1,
+      .container__opening-body-address--paragraaf .p2,
+      .container__opening-body-address--paragraaf .p3 {
+        padding-bottom: 1rem; } }
+
+.scrollToTopBtn {
+  position: fixed;
+  bottom: 14rem;
+  right: 3rem;
+  border: none;
+  background: none;
+  font-size: 2rem;
+  z-index: 100;
+  color: #161717;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #161717;
+  cursor: pointer;
+  transform: translateY(100px);
+  display: block;
+  opacity: 0;
+  transition: all 0.5s ease;
+  overflow: hidden; }
+  @media only screen and (min-width: 56.25em) {
+    .scrollToTopBtn {
+      bottom: 24rem;
+      right: 8rem; } }
+
+.showBtn {
+  transform: translateY(0);
+  opacity: 1; }
+
+.hoofd-content {
+  width: 100vw;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr, 0.8fr 0.1fr; }
+
+.section-footer {
+  display: none; }
+  @media only screen and (min-width: 56.25em) {
+    .section-footer {
+      display: block; } }
+
+.mobile__footer {
+  width: 100vw;
+  height: 10vh;
+  position: relative; }
+  @media only screen and (min-width: 56.25em) {
+    .mobile__footer {
+      display: none; } }
+  .mobile__footer-horizontal {
+    width: 100%;
+    height: 2px;
+    background-color: rgba(22, 23, 23, 0.8); }
+  .mobile__footer-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0.8rem 1rem; }
+  .mobile__footer-container-body {
+    display: flex; }
+  .mobile__footer-container-body--left {
+    padding: 0 0.5rem; }
+  .mobile__footer-container-body--left p {
+    font-family: "Dosis", sans-serif;
+    color: #161717;
+    font-size: 1.1rem;
+    line-height: 1.4;
+    font-weight: 400; }
+  .mobile__footer-container-body--vertical {
+    display: block;
+    width: 2px;
+    height: 6rem;
+    background-color: rgba(22, 23, 23, 0.8); }
+  .mobile__footer-container-body--right {
+    padding: 0 0.5rem; }
+  .mobile__footer-container-body--right .h10 {
+    font-family: "Dosis", sans-serif;
+    color: #161717;
+    font-size: 1.1rem;
+    font-weight: 400;
+    line-height: 1.4; }
+  .mobile__footer-container-body--right-title {
+    font-family: "Unica One", cursive;
+    font-size: 1.1rem;
+    font-weight: 300;
+    line-height: 1.4; }
+  .mobile__footer-container--social {
+    display: flex;
+    justify-content: space-around;
+    width: 3rem;
+    position: relative;
+    top: 0.5rem;
+    right: 0.5rem; }
+  .mobile__footer-container--social a i {
+    color: #161717;
+    font-size: 1.1rem; }
+
+@media only screen and (min-width: 56.25em) {
+  .section-footer {
+    display: block; }
+  .footer {
+    width: 99vw;
+    height: 12vh;
+    margin: 0 auto; }
+    .footer__horizontal {
+      width: 100%;
+      height: 2px;
+      background-color: #161717; }
+    .footer__container {
+      width: 100%;
+      max-width: 90rem;
+      height: 12vh;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding-top: 0.5rem;
+      padding-bottom: 1rem;
+      margin: 1rem auto; } }
+    @media only screen and (min-width: 56.25em) and (min-width: 75em) {
+      .footer__container {
+        max-width: 110rem; } }
+    @media only screen and (min-width: 56.25em) and (min-width: 85em) {
+      .footer__container {
+        max-width: 170rem; } }
+
+@media only screen and (min-width: 56.25em) {
+    .footer__body {
+      display: flex;
+      flex: 1;
+      padding-left: 3rem;
+      color: #161717; }
+    .footer__left h3 {
+      font-family: "Dosis", sans-serif;
+      font-weight: 300;
+      color: #161717;
+      font-size: 1.6rem;
+      line-height: 1.3; }
+    .footer__social {
+      width: 3.5rem;
+      display: flex;
+      justify-content: space-between;
+      position: relative;
+      top: 0.5rem; }
+    .footer__social a i {
+      color: #161717;
+      font-size: 1.4rem; }
+    .footer__vertical {
+      width: 2px;
+      height: 8rem;
+      background-color: #161717;
+      margin-left: 1.2rem; }
+    .footer__right {
+      margin-left: 1.2rem; }
+    .footer__right-title {
+      font-family: "Unica One", cursive;
+      font-weight: 500;
+      color: #161717;
+      font-size: 1.6rem;
+      line-height: 1.3; }
+    .footer__right .h12 {
+      font-family: "Dosis", sans-serif;
+      font-weight: 300;
+      font-size: 1.6rem;
+      color: #161717;
+      line-height: 1.3; }
+    .footer__design {
+      display: flex;
+      flex-direction: column;
+      flex: 0.4;
+      margin-right: 3rem; }
+    .footer__logo {
+      width: 12rem;
+      position: relative;
+      align-self: flex-end; } }
+    @media only screen and (min-width: 56.25em) and (min-width: 85em) {
+      .footer__logo {
+        width: 14rem; } }
+
+@media only screen and (min-width: 56.25em) {
+    .footer__ontwerp h4 {
+      font-family: "Dosis", sans-serif;
+      color: #161717;
+      font-size: 1.6rem;
+      font-weight: 300;
+      text-align: right;
+      line-height: 1.3; } }

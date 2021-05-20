@@ -1,0 +1,7 @@
+.hoofd-content {
+  width: 100vw;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr, 0.8fr 0.1fr;
+}

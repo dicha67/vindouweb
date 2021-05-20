@@ -9,19 +9,45 @@
 html {
   font-size: 62.5%;
 
-  @include respond(desktop) {
-    font-size: 75%; // 1rem = 12 px
+  @include respond(tab-port) {
+    font-size: 50%; // 1rem = 8 px
   }
 
   @include respond(tab-land) {
     font-size: 56.25%; // 1rem = 9 px
   }
 
-  @include respond(tab-port) {
-    font-size: 50%; // 1rem = 8 px
-  }
+  /*@include respond(desktop) {
+    font-size: 65%; // 1rem = 12 px
+  }*/
 }
 
 body {
   box-sizing: border-box;
+  overflow-x: hidden;
+  animation: fadeInAnimation ease 3s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+a[href^="tel"] {
+  text-decoration: inherit;
+  color: rgb(16, 17, 17);
+}
+
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
