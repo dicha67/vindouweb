@@ -1,0 +1,13 @@
+.dining__container {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+
+  @include respond(tab-port) {
+    flex-direction: row-reverse;
+    max-width: 110rem;
+  }
+}
