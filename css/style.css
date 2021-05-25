@@ -333,7 +333,7 @@ a[href^="tel"] {
       .container__gevel-body-address--title {
         font-size: 3rem;
         top: -3rem;
-        left: -6rem; } }
+        left: -5.5rem; } }
   .container__gevel-body-address--paragraaf {
     font-size: 1.7rem;
     font-family: "Dosis", sans-serif;
@@ -475,15 +475,15 @@ a[href^="tel"] {
     left: -0.5rem; }
     @media only screen and (min-width: 56.25em) {
       .container__opening-body-address--title {
-        font-size: 3.2rem;
+        font-size: 2.8rem;
         position: relative;
         left: -5rem;
         top: -4.5rem; } }
     @media only screen and (min-width: 85em) {
       .container__opening-body-address--title {
-        font-size: 3.4rem;
+        font-size: 3rem;
         top: -4rem;
-        left: -5rem; } }
+        left: -4.5rem; } }
   .container__opening-body-address--paragraaf {
     font-size: 1.7rem;
     font-family: "Dosis", sans-serif;
@@ -495,7 +495,7 @@ a[href^="tel"] {
     letter-spacing: 0.1px; }
     @media only screen and (min-width: 56.25em) {
       .container__opening-body-address--paragraaf {
-        font-size: 2.2rem;
+        font-size: 2.1rem;
         margin-top: 0;
         margin-left: 0;
         position: relative;
@@ -503,7 +503,7 @@ a[href^="tel"] {
         left: -0.5rem; } }
     @media only screen and (min-width: 85em) {
       .container__opening-body-address--paragraaf {
-        font-size: 2.4rem;
+        font-size: 2.2rem;
         margin-top: 0;
         margin-left: 0;
         position: relative;
