@@ -82,8 +82,9 @@
     }
 
     @include respond(tab-land) {
+      width: 100%;
       position: relative;
-      top: 4rem;
+      top: 2rem;
       left: 3rem;
     }
   }

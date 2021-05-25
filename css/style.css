@@ -1035,8 +1035,9 @@ a[href^="tel"] {
         flex: 1; } }
     @media only screen and (min-width: 75em) {
       .food__container-body {
+        width: 100%;
         position: relative;
-        top: 4rem;
+        top: 2rem;
         left: 3rem; } }
   .food__container-haakje {
     transform: scale(1.2);
