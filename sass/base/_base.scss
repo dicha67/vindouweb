@@ -52,3 +52,8 @@ a[href^="tel"] {
     opacity: 1;
   }
 }
+
+::selection {
+  background-color: $color-PrimaryLight;
+  color: #fff;
+}
