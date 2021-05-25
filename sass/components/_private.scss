@@ -1,0 +1,67 @@
+.private__container {
+  grid-column: 1 / 2;
+  grid-row: 3 / 4;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+
+  @include respond(tab-port) {
+    flex-direction: row-reverse;
+    max-width: 110rem;
+  }
+
+  @include respond(tab-land) {
+    max-width: 150rem;
+  }
+
+  @include respond(desktop) {
+    max-width: 180rem;
+  }
+
+  &-img {
+    display: block;
+    width: 70vw;
+    margin: 0 auto;
+    padding: 4rem 0;
+
+    @include respond(tab-port) {
+      margin: 0;
+      padding: 0;
+      flex: 0.8;
+    }
+
+    @include respond(tab-land) {
+      margin-top: -2rem;
+    }
+  }
+
+  &-img-foto {
+    display: block;
+    width: 80%;
+    //height: auto;
+    margin-left: auto;
+    margin-right: auto;
+
+    @include respond(tab-port) {
+      margin-left: 0;
+      margin-right: 0;
+      width: 80%;
+      position: relative;
+      left: 0;
+      top: -4rem;
+    }
+
+    @include respond(tab-land) {
+      top: -8rem;
+      left: 0;
+    }
+
+    @include respond(desktop) {
+      width: 70%;
+      position: relative;
+      top: -12rem;
+      left: 8rem;
+    }
+  }
+}

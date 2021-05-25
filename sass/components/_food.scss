@@ -1,0 +1,216 @@
+.food__container {
+  max-width: 100%;
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+
+  @include respond(tab-port) {
+    flex-direction: row-reverse;
+    max-width: 110rem;
+  }
+
+  @include respond(tab-land) {
+    max-width: 150rem;
+    position: relative;
+    top: 6rem;
+  }
+
+  @include respond(desktop) {
+    max-width: 180rem;
+  }
+
+  &-img {
+    display: block;
+    width: 80vw;
+    margin: 0 auto;
+    padding-bottom: 2rem;
+
+    @include respond(tab-port) {
+      margin: 0;
+      padding: 0;
+      flex: 0.8;
+    }
+
+    @include respond(tab-land) {
+      margin-top: 0;
+    }
+  }
+
+  &-img-foto {
+    display: block;
+    width: 80%;
+    //height: auto;
+    margin-left: auto;
+    margin-right: auto;
+
+    @include respond(ipad) {
+      width: 60%;
+    }
+
+    @include respond(tab-port) {
+      margin-left: 0;
+      margin-right: 0;
+      width: 80%;
+      position: relative;
+      left: 7rem;
+      top: -4rem;
+    }
+
+    @include respond(tab-land) {
+      top: -8rem;
+      left: 12rem;
+    }
+
+    @include respond(desktop) {
+      width: 80%;
+      position: relative;
+      top: -12rem;
+    }
+  }
+
+  &-body {
+    width: 95%;
+    display: flex;
+    margin: 0 auto;
+    position: relative;
+    padding-bottom: 3rem;
+
+    @include respond(tab-port) {
+      flex: 1;
+    }
+
+    @include respond(tab-land) {
+      position: relative;
+      top: 4rem;
+      left: 3rem;
+    }
+  }
+
+  &-haakje {
+    transform: scale(1.2);
+    position: relative;
+    top: 2rem;
+
+    @include respond(tab-port) {
+      transform: scale(1.1);
+    }
+  }
+
+  &-body-address {
+    width: 100%;
+    position: relative;
+    top: -1rem;
+
+    @include respond(tab-port) {
+      max-width: 70%;
+      top: 2rem;
+    }
+  }
+
+  &-body-address-title {
+    font-size: 2.5rem;
+    font-family: $font-Titels;
+    font-weight: 500;
+    color: $color-Primary;
+    position: relative;
+    left: -4.5rem;
+
+    @include respond(tab-port) {
+      font-size: 2.8rem;
+      left: -6rem;
+    }
+  }
+
+  &-paragraaf {
+    max-width: 100%;
+    font-size: 1.6rem;
+    font-family: $font-Primary;
+    color: $color-Primary;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+    line-height: 1.3;
+    position: relative;
+    top: 0;
+    left: -1rem;
+
+    @include respond(ipad) {
+      max-width: 80%;
+      top: 2rem;
+    }
+
+    @include respond(tab-port) {
+      max-width: 100%;
+      font-size: 1.6rem;
+      line-height: 1.3;
+      top: 0;
+    }
+
+    @include respond(tab-land) {
+      max-width: 100%;
+      font-size: 1.7rem;
+      line-height: 1.3;
+      top: 0;
+    }
+
+    @include respond(desktop) {
+      max-width: 100%;
+      font-size: 1.9rem;
+      line-height: 1.3;
+      top: 0;
+    }
+  }
+
+  &-paragraaf .p {
+    padding: 0.5rem 0;
+  }
+
+  &-paragraaf .p-food {
+    display: none;
+
+    @include respond(ipad) {
+      display: block;
+    }
+
+    @include respond(tab-port) {
+      display: block;
+    }
+  }
+
+  &-btn {
+    max-width: 90%;
+    margin-top: 4rem;
+    text-align: center;
+
+    @include respond(tab-port) {
+      text-align: right;
+    }
+  }
+
+  &-btn-button {
+    font-size: 1.6rem;
+    font-family: $font-Primary;
+    color: $color-Primary;
+    font-weight: 300;
+    padding: 0.5rem;
+    position: relative;
+    cursor: pointer;
+
+    @include respond(tab-port) {
+      font-size: 1.9rem;
+    }
+  }
+
+  &-btn-button::after {
+    content: "";
+    display: block;
+    width: 80%;
+    height: 1px;
+    background-color: $color-Primary;
+    position: absolute;
+    bottom: -0.15rem;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}

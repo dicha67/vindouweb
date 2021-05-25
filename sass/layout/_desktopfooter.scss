@@ -25,12 +25,16 @@
       padding-bottom: 1rem;
       margin: 1rem auto;
 
-      @include respond(tab-land) {
+      @include respond(tab-port) {
         max-width: 110rem;
       }
 
+      @include respond(tab-land) {
+        max-width: 150rem;
+      }
+
       @include respond(desktop) {
-        max-width: 170rem;
+        max-width: 180rem;
       }
     }
 

@@ -21,7 +21,7 @@ html {
 body {
   box-sizing: border-box;
   overflow-x: hidden;
-  animation: fadeInAnimation ease 3s;
+  animation: fadeInAnimation ease 1s;
   animation-iteration-count: 1;
   animation-fill-mode: forwards; }
 
@@ -250,7 +250,10 @@ a[href^="tel"] {
   @media only screen and (min-width: 56.25em) {
     .container__gevel {
       flex-direction: row-reverse;
-      max-width: 90rem; } }
+      max-width: 110rem; } }
+  @media only screen and (min-width: 75em) {
+    .container__gevel {
+      max-width: 150rem; } }
   @media only screen and (min-width: 85em) {
     .container__gevel {
       max-width: 180rem; } }
@@ -263,7 +266,7 @@ a[href^="tel"] {
       .container__gevel-img {
         margin: 0;
         width: 100%;
-        flex: 1; } }
+        flex: 0.8; } }
   .container__gevel-img-foto {
     display: block;
     width: 70%;
@@ -278,7 +281,7 @@ a[href^="tel"] {
         left: 5rem; } }
     @media only screen and (min-width: 85em) {
       .container__gevel-img-foto {
-        width: 80%;
+        width: 70%;
         position: relative;
         left: 4rem; } }
   .container__gevel-body {
@@ -322,13 +325,13 @@ a[href^="tel"] {
     top: 1rem; }
     @media only screen and (min-width: 56.25em) {
       .container__gevel-body-address--title {
-        font-size: 3.2rem;
+        font-size: 2.8rem;
         position: relative;
         left: -6rem;
         top: -4.5rem; } }
     @media only screen and (min-width: 85em) {
       .container__gevel-body-address--title {
-        font-size: 3.4rem;
+        font-size: 3rem;
         top: -3rem;
         left: -6rem; } }
   .container__gevel-body-address--paragraaf {
@@ -342,7 +345,7 @@ a[href^="tel"] {
     letter-spacing: 0.1px; }
     @media only screen and (min-width: 56.25em) {
       .container__gevel-body-address--paragraaf {
-        font-size: 2.2rem;
+        font-size: 2.1rem;
         margin-top: 0;
         margin-left: 0;
         position: relative;
@@ -350,7 +353,7 @@ a[href^="tel"] {
         left: -0.5rem; } }
     @media only screen and (min-width: 85em) {
       .container__gevel-body-address--paragraaf {
-        font-size: 2.4rem;
+        font-size: 2.2rem;
         margin-top: 0;
         margin-left: 0;
         position: relative;
@@ -523,6 +526,7 @@ a[href^="tel"] {
   border: none;
   background: none;
   font-size: 2rem;
+  font-weight: 300;
   z-index: 100;
   color: #161717;
   padding-bottom: 0.5rem;
@@ -741,14 +745,6 @@ a[href^="tel"] {
       .qoute__container-titel {
         font-size: 2.1rem; } }
 
-.restaurant-content {
-  width: 100vw;
-  max-width: 100vw;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: repeat(3, 0.8fr); }
-
 .dining__container {
   grid-column: 1 / 2;
   grid-row: 1 / 2;
@@ -760,6 +756,550 @@ a[href^="tel"] {
     .dining__container {
       flex-direction: row-reverse;
       max-width: 110rem; } }
+  @media only screen and (min-width: 75em) {
+    .dining__container {
+      max-width: 150rem;
+      position: relative;
+      top: 6rem; } }
+  @media only screen and (min-width: 85em) {
+    .dining__container {
+      max-width: 180rem; } }
+  .dining__container-img {
+    display: block;
+    width: 70vw;
+    margin: 0 auto;
+    padding: 4rem 0; }
+    @media only screen and (min-width: 56.25em) {
+      .dining__container-img {
+        margin: 0;
+        padding: 0;
+        flex: 0.7; } }
+    @media only screen and (min-width: 75em) {
+      .dining__container-img {
+        margin-top: 0; } }
+  .dining__container-img-foto {
+    display: block;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto; }
+    @media only screen and (min-width: 47em) {
+      .dining__container-img-foto {
+        width: 60%; } }
+    @media only screen and (min-width: 56.25em) {
+      .dining__container-img-foto {
+        margin-left: 0;
+        margin-right: 0;
+        width: 70%;
+        position: relative;
+        left: 7rem;
+        top: -4rem; } }
+    @media only screen and (min-width: 75em) {
+      .dining__container-img-foto {
+        top: -8rem;
+        left: 12rem; } }
+    @media only screen and (min-width: 85em) {
+      .dining__container-img-foto {
+        width: 60%;
+        position: relative;
+        top: -6rem; } }
+  .dining__container-body {
+    width: 95vw;
+    display: flex;
+    margin: 0 auto;
+    padding: 1.2rem; }
+    @media only screen and (min-width: 56.25em) {
+      .dining__container-body {
+        flex: 1; } }
+    @media only screen and (min-width: 75em) {
+      .dining__container-body {
+        position: relative;
+        top: 4rem;
+        left: 5rem; } }
+  .dining__container-address {
+    width: 90%;
+    position: relative;
+    top: 2.6rem; }
+    @media only screen and (min-width: 56.25em) {
+      .dining__container-address {
+        max-width: 70%; } }
+    @media only screen and (min-width: 75em) {
+      .dining__container-address {
+        top: 2.5rem; } }
+  .dining__container-address-title {
+    font-size: 2.5rem;
+    font-family: "Unica One", cursive;
+    font-weight: 500;
+    color: #161717;
+    position: relative;
+    left: -3.5rem; }
+    @media only screen and (min-width: 56.25em) {
+      .dining__container-address-title {
+        font-size: 2.8rem;
+        left: -6rem; } }
+    @media only screen and (min-width: 75em) {
+      .dining__container-address-title {
+        font-size: 3rem;
+        left: -4rem; } }
+  .dining__container-paragraaf {
+    font-size: 1.6rem;
+    font-family: "Dosis", sans-serif;
+    color: #161717;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+    line-height: 1.4;
+    position: relative;
+    top: 2rem;
+    left: -0.5rem; }
+    @media only screen and (min-width: 75em) {
+      .dining__container-paragraaf {
+        font-size: 2.1rem;
+        top: 1.5rem;
+        max-width: 90%; } }
+
+.outside__container {
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto; }
+  @media only screen and (min-width: 56.25em) {
+    .outside__container {
+      flex-direction: row;
+      max-width: 110rem; } }
+  @media only screen and (min-width: 75em) {
+    .outside__container {
+      max-width: 150rem; } }
+  @media only screen and (min-width: 85em) {
+    .outside__container {
+      max-width: 180rem; } }
+  .outside__container-img {
+    display: block;
+    width: 100vw;
+    margin: 0 auto;
+    padding: 4rem 0; }
+    @media only screen and (min-width: 56.25em) {
+      .outside__container-img {
+        margin: 0;
+        padding: 0;
+        flex: 0.7; } }
+    @media only screen and (min-width: 75em) {
+      .outside__container-img {
+        margin-top: 0; } }
+  .outside__container-img-foto {
+    display: block;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    transform: rotate(-90deg) scale(1);
+    position: relative; }
+    @media only screen and (min-width: 56.25em) {
+      .outside__container-img-foto {
+        margin-left: 0;
+        margin-right: 0;
+        width: 100%;
+        position: relative;
+        left: 7rem;
+        top: -4rem;
+        transform: rotate(0) scale(1.3); } }
+    @media only screen and (min-width: 75em) {
+      .outside__container-img-foto {
+        top: -8rem;
+        left: 0; } }
+    @media only screen and (min-width: 85em) {
+      .outside__container-img-foto {
+        width: 100%;
+        position: relative;
+        top: -8rem;
+        left: 0; } }
+
+.private__container {
+  grid-column: 1 / 2;
+  grid-row: 3 / 4;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto; }
+  @media only screen and (min-width: 56.25em) {
+    .private__container {
+      flex-direction: row-reverse;
+      max-width: 110rem; } }
+  @media only screen and (min-width: 75em) {
+    .private__container {
+      max-width: 150rem; } }
+  @media only screen and (min-width: 85em) {
+    .private__container {
+      max-width: 180rem; } }
+  .private__container-img {
+    display: block;
+    width: 70vw;
+    margin: 0 auto;
+    padding: 4rem 0; }
+    @media only screen and (min-width: 56.25em) {
+      .private__container-img {
+        margin: 0;
+        padding: 0;
+        flex: 0.8; } }
+    @media only screen and (min-width: 75em) {
+      .private__container-img {
+        margin-top: -2rem; } }
+  .private__container-img-foto {
+    display: block;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto; }
+    @media only screen and (min-width: 56.25em) {
+      .private__container-img-foto {
+        margin-left: 0;
+        margin-right: 0;
+        width: 80%;
+        position: relative;
+        left: 0;
+        top: -4rem; } }
+    @media only screen and (min-width: 75em) {
+      .private__container-img-foto {
+        top: -8rem;
+        left: 0; } }
+    @media only screen and (min-width: 85em) {
+      .private__container-img-foto {
+        width: 70%;
+        position: relative;
+        top: -12rem;
+        left: 8rem; } }
+
+.food__container {
+  max-width: 100%;
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column; }
+  @media only screen and (min-width: 56.25em) {
+    .food__container {
+      flex-direction: row-reverse;
+      max-width: 110rem; } }
+  @media only screen and (min-width: 75em) {
+    .food__container {
+      max-width: 150rem;
+      position: relative;
+      top: 6rem; } }
+  @media only screen and (min-width: 85em) {
+    .food__container {
+      max-width: 180rem; } }
+  .food__container-img {
+    display: block;
+    width: 80vw;
+    margin: 0 auto;
+    padding-bottom: 2rem; }
+    @media only screen and (min-width: 56.25em) {
+      .food__container-img {
+        margin: 0;
+        padding: 0;
+        flex: 0.8; } }
+    @media only screen and (min-width: 75em) {
+      .food__container-img {
+        margin-top: 0; } }
+  .food__container-img-foto {
+    display: block;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto; }
+    @media only screen and (min-width: 47em) {
+      .food__container-img-foto {
+        width: 60%; } }
+    @media only screen and (min-width: 56.25em) {
+      .food__container-img-foto {
+        margin-left: 0;
+        margin-right: 0;
+        width: 80%;
+        position: relative;
+        left: 7rem;
+        top: -4rem; } }
+    @media only screen and (min-width: 75em) {
+      .food__container-img-foto {
+        top: -8rem;
+        left: 12rem; } }
+    @media only screen and (min-width: 85em) {
+      .food__container-img-foto {
+        width: 80%;
+        position: relative;
+        top: -12rem; } }
+  .food__container-body {
+    width: 95%;
+    display: flex;
+    margin: 0 auto;
+    position: relative;
+    padding-bottom: 3rem; }
+    @media only screen and (min-width: 56.25em) {
+      .food__container-body {
+        flex: 1; } }
+    @media only screen and (min-width: 75em) {
+      .food__container-body {
+        position: relative;
+        top: 4rem;
+        left: 3rem; } }
+  .food__container-haakje {
+    transform: scale(1.2);
+    position: relative;
+    top: 2rem; }
+    @media only screen and (min-width: 56.25em) {
+      .food__container-haakje {
+        transform: scale(1.1); } }
+  .food__container-body-address {
+    width: 100%;
+    position: relative;
+    top: -1rem; }
+    @media only screen and (min-width: 56.25em) {
+      .food__container-body-address {
+        max-width: 70%;
+        top: 2rem; } }
+  .food__container-body-address-title {
+    font-size: 2.5rem;
+    font-family: "Unica One", cursive;
+    font-weight: 500;
+    color: #161717;
+    position: relative;
+    left: -4.5rem; }
+    @media only screen and (min-width: 56.25em) {
+      .food__container-body-address-title {
+        font-size: 2.8rem;
+        left: -6rem; } }
+  .food__container-paragraaf {
+    max-width: 100%;
+    font-size: 1.6rem;
+    font-family: "Dosis", sans-serif;
+    color: #161717;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+    line-height: 1.3;
+    position: relative;
+    top: 0;
+    left: -1rem; }
+    @media only screen and (min-width: 47em) {
+      .food__container-paragraaf {
+        max-width: 80%;
+        top: 2rem; } }
+    @media only screen and (min-width: 56.25em) {
+      .food__container-paragraaf {
+        max-width: 100%;
+        font-size: 1.6rem;
+        line-height: 1.3;
+        top: 0; } }
+    @media only screen and (min-width: 75em) {
+      .food__container-paragraaf {
+        max-width: 100%;
+        font-size: 1.7rem;
+        line-height: 1.3;
+        top: 0; } }
+    @media only screen and (min-width: 85em) {
+      .food__container-paragraaf {
+        max-width: 100%;
+        font-size: 1.9rem;
+        line-height: 1.3;
+        top: 0; } }
+  .food__container-paragraaf .p {
+    padding: 0.5rem 0; }
+  .food__container-paragraaf .p-food {
+    display: none; }
+    @media only screen and (min-width: 47em) {
+      .food__container-paragraaf .p-food {
+        display: block; } }
+    @media only screen and (min-width: 56.25em) {
+      .food__container-paragraaf .p-food {
+        display: block; } }
+  .food__container-btn {
+    max-width: 90%;
+    margin-top: 4rem;
+    text-align: center; }
+    @media only screen and (min-width: 56.25em) {
+      .food__container-btn {
+        text-align: right; } }
+  .food__container-btn-button {
+    font-size: 1.6rem;
+    font-family: "Dosis", sans-serif;
+    color: #161717;
+    font-weight: 300;
+    padding: 0.5rem;
+    position: relative;
+    cursor: pointer; }
+    @media only screen and (min-width: 56.25em) {
+      .food__container-btn-button {
+        font-size: 1.9rem; } }
+  .food__container-btn-button::after {
+    content: "";
+    display: block;
+    width: 80%;
+    height: 1px;
+    background-color: #161717;
+    position: absolute;
+    bottom: -0.15rem;
+    left: 50%;
+    transform: translateX(-50%); }
+
+.wine__container {
+  max-width: 100%;
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column; }
+  @media only screen and (min-width: 56.25em) {
+    .wine__container {
+      flex-direction: row;
+      max-width: 110rem; } }
+  @media only screen and (min-width: 75em) {
+    .wine__container {
+      max-width: 150rem;
+      position: relative; } }
+  @media only screen and (min-width: 85em) {
+    .wine__container {
+      max-width: 180rem; } }
+  .wine__container-img {
+    display: block;
+    width: 80vw;
+    margin: 0 auto; }
+    @media only screen and (min-width: 56.25em) {
+      .wine__container-img {
+        margin: 0;
+        padding: 0;
+        flex: 0.7; } }
+    @media only screen and (min-width: 75em) {
+      .wine__container-img {
+        margin-top: 0; } }
+  .wine__container-img-foto {
+    display: block;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto; }
+    @media only screen and (min-width: 47em) {
+      .wine__container-img-foto {
+        width: 60%; } }
+    @media only screen and (min-width: 56.25em) {
+      .wine__container-img-foto {
+        margin-left: 0;
+        margin-right: 0;
+        width: 70%;
+        position: relative; } }
+    @media only screen and (min-width: 75em) {
+      .wine__container-img-foto {
+        top: -8rem;
+        left: 12rem; } }
+    @media only screen and (min-width: 85em) {
+      .wine__container-img-foto {
+        width: 80%;
+        position: relative;
+        top: -12rem; } }
+  .wine__container-body {
+    width: 95%;
+    display: flex;
+    margin: 0 auto;
+    position: relative; }
+    @media only screen and (min-width: 47em) {
+      .wine__container-body {
+        width: 90%; } }
+    @media only screen and (min-width: 56.25em) {
+      .wine__container-body {
+        flex: 1; } }
+    @media only screen and (min-width: 75em) {
+      .wine__container-body {
+        position: relative;
+        top: 4rem;
+        left: 3rem; } }
+  .wine__container-haakje {
+    transform: scale(1);
+    position: relative;
+    top: 3.5rem; }
+  .wine__container-body-address {
+    max-width: 95%;
+    position: relative;
+    top: 5rem; }
+  .wine__container-body-address-title {
+    font-size: 2.5rem;
+    font-family: "Unica One", cursive;
+    font-weight: 500;
+    color: #161717;
+    position: relative;
+    left: -3.5rem; }
+    @media only screen and (min-width: 56.25em) {
+      .wine__container-body-address-title {
+        font-size: 2.8rem;
+        left: -4rem; } }
+  .wine__container-paragraaf {
+    max-width: 95%;
+    font-size: 1.6rem;
+    font-family: "Dosis", sans-serif;
+    color: #161717;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+    line-height: 1.3;
+    position: relative;
+    top: 0.2rem;
+    left: -1rem; }
+    @media only screen and (min-width: 47em) {
+      .wine__container-paragraaf {
+        max-width: 75%; } }
+    @media only screen and (min-width: 56.25em) {
+      .wine__container-paragraaf {
+        max-width: 75%;
+        font-size: 1.9rem;
+        line-height: 1.4;
+        top: 0; } }
+
+.grappa__container {
+  width: 100vw;
+  margin: 0 auto;
+  grid-column: 1 / 2;
+  grid-row: 3 / 4;
+  display: flex;
+  flex-direction: column; }
+  @media only screen and (min-width: 56.25em) {
+    .grappa__container {
+      flex-direction: row-reverse;
+      max-width: 110rem; } }
+  @media only screen and (min-width: 75em) {
+    .grappa__container {
+      max-width: 150rem;
+      position: relative; } }
+  @media only screen and (min-width: 85em) {
+    .grappa__container {
+      max-width: 180rem; } }
+  .grappa__container-img {
+    display: block;
+    width: 70vw;
+    margin: 0 auto; }
+    @media only screen and (min-width: 56.25em) {
+      .grappa__container-img {
+        margin: 0;
+        padding: 0;
+        flex: 0.7; } }
+    @media only screen and (min-width: 75em) {
+      .grappa__container-img {
+        margin-top: 0; } }
+  .grappa__container-img-foto {
+    display: block;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -7rem;
+    padding-bottom: 7rem; }
+    @media only screen and (min-width: 47em) {
+      .grappa__container-img-foto {
+        width: 60%; } }
+    @media only screen and (min-width: 56.25em) {
+      .grappa__container-img-foto {
+        margin-left: 0;
+        margin-right: 0;
+        width: 70%;
+        position: relative; } }
+    @media only screen and (min-width: 75em) {
+      .grappa__container-img-foto {
+        top: -8rem;
+        left: 12rem; } }
+    @media only screen and (min-width: 85em) {
+      .grappa__container-img-foto {
+        width: 80%;
+        position: relative;
+        top: -12rem; } }
 
 .hoofd-content {
   width: 100vw;
@@ -782,7 +1322,15 @@ a[href^="tel"] {
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: repeat(3, 0.8fr); }
+  grid-template-rows: repeat(3, 0.7fr); }
+
+.menu-content {
+  width: 100vw;
+  max-width: 100vw;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(2, 1fr) 0.9fr; }
 
 .section-footer {
   display: none; }
@@ -867,12 +1415,15 @@ a[href^="tel"] {
       padding-top: 0.5rem;
       padding-bottom: 1rem;
       margin: 1rem auto; } }
-    @media only screen and (min-width: 56.25em) and (min-width: 75em) {
+    @media only screen and (min-width: 56.25em) and (min-width: 56.25em) {
       .footer__container {
         max-width: 110rem; } }
+    @media only screen and (min-width: 56.25em) and (min-width: 75em) {
+      .footer__container {
+        max-width: 150rem; } }
     @media only screen and (min-width: 56.25em) and (min-width: 85em) {
       .footer__container {
-        max-width: 170rem; } }
+        max-width: 180rem; } }
 
 @media only screen and (min-width: 56.25em) {
     .footer__body {

@@ -1,0 +1,73 @@
+.grappa__container {
+  width: 100vw;
+  margin: 0 auto;
+  grid-column: 1 / 2;
+  grid-row: 3 / 4;
+  display: flex;
+  flex-direction: column;
+
+  @include respond(tab-port) {
+    flex-direction: row-reverse;
+    max-width: 110rem;
+  }
+
+  @include respond(tab-land) {
+    max-width: 150rem;
+    position: relative;
+    //top: 6rem;
+  }
+
+  @include respond(desktop) {
+    max-width: 180rem;
+  }
+
+  &-img {
+    display: block;
+    width: 70vw;
+    margin: 0 auto;
+
+    @include respond(tab-port) {
+      margin: 0;
+      padding: 0;
+      flex: 0.7;
+    }
+
+    @include respond(tab-land) {
+      margin-top: 0;
+    }
+  }
+
+  &-img-foto {
+    display: block;
+    width: 80%;
+    //height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -7rem;
+    padding-bottom: 7rem;
+
+    @include respond(ipad) {
+      width: 60%;
+    }
+
+    @include respond(tab-port) {
+      margin-left: 0;
+      margin-right: 0;
+      width: 70%;
+      position: relative;
+      //left: -8rem;
+      //top: -4rem;
+    }
+
+    @include respond(tab-land) {
+      top: -8rem;
+      left: 12rem;
+    }
+
+    @include respond(desktop) {
+      width: 80%;
+      position: relative;
+      top: -12rem;
+    }
+  }
+}

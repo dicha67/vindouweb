@@ -8,7 +8,11 @@
 
   @include respond(tab-port) {
     flex-direction: row-reverse;
-    max-width: 90rem;
+    max-width: 110rem;
+  }
+
+  @include respond(tab-land) {
+    max-width: 150rem;
   }
 
   @include respond(desktop) {
@@ -24,7 +28,7 @@
     @include respond(tab-port) {
       margin: 0;
       width: 100%;
-      flex: 1;
+      flex: 0.8;
     }
   }
 
@@ -44,7 +48,7 @@
     }
 
     @include respond(desktop) {
-      width: 80%;
+      width: 70%;
       position: relative;
       left: 4rem;
     }
@@ -104,14 +108,14 @@
     top: 1rem;
 
     @include respond(tab-port) {
-      font-size: 3.2rem;
+      font-size: 2.8rem;
       position: relative;
       left: -6rem;
       top: -4.5rem;
     }
 
     @include respond(desktop) {
-      font-size: 3.4rem;
+      font-size: 3rem;
       top: -3rem;
       left: -6rem;
     }
@@ -128,7 +132,7 @@
     letter-spacing: 0.1px;
 
     @include respond(tab-port) {
-      font-size: 2.2rem;
+      font-size: 2.1rem;
       margin-top: 0;
       margin-left: 0;
       position: relative;
@@ -137,7 +141,7 @@
     }
 
     @include respond(desktop) {
-      font-size: 2.4rem;
+      font-size: 2.2rem;
       margin-top: 0;
       margin-left: 0;
       position: relative;

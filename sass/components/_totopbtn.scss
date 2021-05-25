@@ -2,11 +2,10 @@
   position: fixed;
   bottom: 14rem;
   right: 3rem;
-
   border: none;
   background: none;
   font-size: 2rem;
-
+  font-weight: 300;
   z-index: 100;
   color: $color-Primary;
   padding-bottom: 0.5rem;
@@ -17,6 +16,7 @@
   opacity: 0;
   transition: all 0.5s ease;
   overflow: hidden;
+
   @include respond(tab-port) {
     bottom: 24rem;
     right: 8rem;
