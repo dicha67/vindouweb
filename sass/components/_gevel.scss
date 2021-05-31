@@ -42,15 +42,15 @@
     @include respond(tab-port) {
       margin-left: 0;
       margin-right: 0;
-      width: 100%;
+      width: 80%;
       position: relative;
-      left: 5rem;
+      left: 0;
     }
 
     @include respond(desktop) {
       width: 70%;
       position: relative;
-      left: 4rem;
+      left: 6rem;
     }
   }
 
