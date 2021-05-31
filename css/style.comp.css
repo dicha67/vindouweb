@@ -1273,6 +1273,9 @@ a[href^="tel"] {
         line-height: 1.4;
         top: 2rem;
         left: 0; } }
+    @media only screen and (min-width: 90em) {
+      .wine__container-paragraaf {
+        font-size: 1.9rem; } }
 
 .grappa__container {
   width: 100vw;
