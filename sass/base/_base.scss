@@ -11,11 +11,11 @@ html {
   scroll-behavior: smooth;
 
   @include respond(tab-port) {
-    font-size: 50%; // 1rem = 8 px
+    font-size: 52%; // 1rem = 8 px
   }
 
   @include respond(tab-land) {
-    font-size: 56.25%; // 1rem = 9 px
+    font-size: 57.25%; // 1rem = 9 px
   }
 
   /*@include respond(desktop) {

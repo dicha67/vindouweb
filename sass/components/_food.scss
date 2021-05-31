@@ -207,6 +207,13 @@
     }
   }
 
+  &-btn-button-pdf {
+    font-size: 1.6rem;
+    font-family: $font-Primary;
+    color: $color-Medium;
+    font-weight: 300;
+  }
+
   &-btn-button::after {
     content: "";
     display: block;

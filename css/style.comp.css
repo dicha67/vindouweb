@@ -13,10 +13,10 @@ html {
   }*/ }
   @media only screen and (min-width: 56.25em) {
     html {
-      font-size: 50%; } }
+      font-size: 52%; } }
   @media only screen and (min-width: 75em) {
     html {
-      font-size: 56.25%; } }
+      font-size: 57.25%; } }
 
 body {
   box-sizing: border-box;
@@ -241,10 +241,10 @@ a[href^="tel"] {
       justify-content: center;
       align-items: center; }
       .logo__img {
-        transform: scale(0.5); } }
+        transform: scale(0.6); } }
     @media only screen and (min-width: 56.25em) and (min-width: 75em) {
       .logo__img {
-        transform: scale(0.7); } }
+        transform: scale(0.9); } }
 
 .container__gevel {
   grid-column: 1 / 2;
@@ -1149,6 +1149,11 @@ a[href^="tel"] {
     @media only screen and (min-width: 56.25em) {
       .food__container-btn-button {
         font-size: 1.9rem; } }
+  .food__container-btn-button-pdf {
+    font-size: 1.6rem;
+    font-family: "Dosis", sans-serif;
+    color: #a4b2c3;
+    font-weight: 300; }
   .food__container-btn-button::after {
     content: "";
     display: block;
