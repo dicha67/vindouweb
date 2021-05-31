@@ -931,8 +931,7 @@ a[href^="tel"] {
         top: -8rem;
         left: 0; } }
   .outside__container--body {
-    position: relative;
-    left: 5rem; }
+    position: relative; }
 
 .private__container {
   grid-column: 1 / 2;
