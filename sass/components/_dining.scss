@@ -1,7 +1,7 @@
 .dining__container {
   grid-column: 1 / 2;
   grid-row: 1 / 2;
-  width: 100%;
+  max-width: 100%;
   display: flex;
   flex-direction: column;
   margin: 0 auto;
@@ -86,6 +86,10 @@
       top: 4rem;
       left: 5rem;
     }
+
+    @include respond(desktop) {
+      padding-left: 7rem;
+    }
   }
 
   &-address {
@@ -94,7 +98,7 @@
     top: 2.6rem;
 
     @include respond(tab-port) {
-      max-width: 70%;
+      max-width: 80%;
     }
 
     @include respond(tab-land) {
@@ -112,7 +116,7 @@
 
     @include respond(tab-port) {
       font-size: 2.8rem;
-      left: -6rem;
+      left: -4rem;
     }
 
     @include respond(tab-land) {

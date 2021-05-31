@@ -20,10 +20,12 @@ html {
 
 body {
   box-sizing: border-box;
-  overflow-x: hidden;
-  animation: fadeInAnimation ease 1s;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards; }
+  overflow-x: hidden; }
+  @media only screen and (min-width: 56.25em) {
+    body {
+      animation: fadeInAnimation ease 1s;
+      animation-iteration-count: 1;
+      animation-fill-mode: forwards; } }
 
 ul {
   list-style: none; }
@@ -46,14 +48,14 @@ a[href^="tel"] {
   color: #fff; }
 
 .header {
-  width: 100%;
+  max-width: 100%;
   position: relative; }
   .header__navigation {
     display: none; }
   .header__nav {
     display: none; }
   .header__wrapper {
-    width: 100%; }
+    max-width: 100%; }
   .header__menu-content {
     width: 0;
     opacity: 0;
@@ -82,7 +84,7 @@ a[href^="tel"] {
     opacity: 0;
     transition: opacity 0.8s ease; }
   .header__wrapper-nav-links {
-    width: 100%;
+    max-width: 100%;
     height: 100%;
     list-style: none;
     display: flex;
@@ -91,7 +93,7 @@ a[href^="tel"] {
     justify-content: space-around; }
   .header__wrapper-nav-links--items {
     display: block;
-    width: 100%;
+    max-width: 100%;
     text-align: center; }
   .header__wrapper-nav-links--items--item {
     display: block;
@@ -566,7 +568,8 @@ a[href^="tel"] {
       max-width: 150rem; } }
   @media only screen and (min-width: 90em) {
     .about__container {
-      max-width: 174rem; } }
+      max-width: 174rem;
+      padding-left: 6rem; } }
   .about__container-img {
     display: block;
     width: 70vw;
@@ -602,7 +605,7 @@ a[href^="tel"] {
         width: 80%;
         position: relative;
         top: -12rem;
-        left: 5rem; } }
+        left: 7rem; } }
   .about__container-body {
     width: 95vw;
     margin: 0 auto;
@@ -610,7 +613,8 @@ a[href^="tel"] {
     padding: 0 1rem; }
     @media only screen and (min-width: 56.25em) {
       .about__container-body {
-        flex: 1; } }
+        flex: 1;
+        padding: 0; } }
     @media only screen and (min-width: 75em) {
       .about__container-body {
         position: relative;
@@ -758,7 +762,7 @@ a[href^="tel"] {
 .dining__container {
   grid-column: 1 / 2;
   grid-row: 1 / 2;
-  width: 100%;
+  max-width: 100%;
   display: flex;
   flex-direction: column;
   margin: 0 auto; }
@@ -826,13 +830,16 @@ a[href^="tel"] {
         position: relative;
         top: 4rem;
         left: 5rem; } }
+    @media only screen and (min-width: 90em) {
+      .dining__container-body {
+        padding-left: 7rem; } }
   .dining__container-address {
     width: 90%;
     position: relative;
     top: 2.6rem; }
     @media only screen and (min-width: 56.25em) {
       .dining__container-address {
-        max-width: 70%; } }
+        max-width: 80%; } }
     @media only screen and (min-width: 75em) {
       .dining__container-address {
         top: 2.5rem; } }
@@ -846,7 +853,7 @@ a[href^="tel"] {
     @media only screen and (min-width: 56.25em) {
       .dining__container-address-title {
         font-size: 2.8rem;
-        left: -6rem; } }
+        left: -4rem; } }
     @media only screen and (min-width: 75em) {
       .dining__container-address-title {
         font-size: 3rem;
@@ -870,7 +877,7 @@ a[href^="tel"] {
 .outside__container {
   grid-column: 1 / 2;
   grid-row: 2 / 3;
-  width: 100%;
+  max-width: 100%;
   display: flex;
   flex-direction: column;
   margin: 0 auto; }
@@ -886,7 +893,7 @@ a[href^="tel"] {
       max-width: 180rem; } }
   .outside__container-img {
     display: block;
-    width: 100vw;
+    width: 80vw;
     margin: 0 auto;
     padding: 4rem 0; }
     @media only screen and (min-width: 56.25em) {
@@ -923,11 +930,14 @@ a[href^="tel"] {
         position: relative;
         top: -8rem;
         left: 0; } }
+  .outside__container--body {
+    position: relative;
+    left: 5rem; }
 
 .private__container {
   grid-column: 1 / 2;
   grid-row: 3 / 4;
-  width: 100%;
+  max-width: 100%;
   display: flex;
   flex-direction: column;
   margin: 0 auto; }
@@ -1050,6 +1060,9 @@ a[href^="tel"] {
         position: relative;
         top: 2rem;
         left: 3rem; } }
+    @media only screen and (min-width: 90em) {
+      .food__container-body {
+        padding-left: 5rem; } }
   .food__container-haakje {
     transform: scale(1.2);
     position: relative;
@@ -1078,12 +1091,12 @@ a[href^="tel"] {
         left: -6rem; } }
   .food__container-paragraaf {
     max-width: 100%;
-    font-size: 1.6rem;
+    font-size: 1.5rem;
     font-family: "Dosis", sans-serif;
     color: #161717;
     font-weight: 300;
     letter-spacing: 0.5px;
-    line-height: 1.3;
+    line-height: 1.4;
     position: relative;
     top: 0;
     left: -1rem; }
@@ -1107,7 +1120,7 @@ a[href^="tel"] {
       .food__container-paragraaf {
         max-width: 100%;
         font-size: 1.9rem;
-        line-height: 1.3;
+        line-height: 1.4;
         top: 0; } }
   .food__container-paragraaf .p {
     padding: 0.5rem 0; }
@@ -1217,6 +1230,9 @@ a[href^="tel"] {
         position: relative;
         top: 4rem;
         left: 3rem; } }
+    @media only screen and (min-width: 90em) {
+      .wine__container-body {
+        padding-left: 7rem; } }
   .wine__container-haakje {
     transform: scale(1);
     position: relative;
@@ -1235,15 +1251,16 @@ a[href^="tel"] {
     @media only screen and (min-width: 56.25em) {
       .wine__container-body-address-title {
         font-size: 2.8rem;
-        left: -4rem; } }
+        left: -4.2rem;
+        top: 1rem; } }
   .wine__container-paragraaf {
     max-width: 95%;
-    font-size: 1.6rem;
+    font-size: 1.5rem;
     font-family: "Dosis", sans-serif;
     color: #161717;
     font-weight: 300;
     letter-spacing: 0.5px;
-    line-height: 1.3;
+    line-height: 1.4;
     position: relative;
     top: 0.2rem;
     left: -1rem; }
@@ -1253,9 +1270,10 @@ a[href^="tel"] {
     @media only screen and (min-width: 56.25em) {
       .wine__container-paragraaf {
         max-width: 75%;
-        font-size: 1.9rem;
+        font-size: 1.6rem;
         line-height: 1.4;
-        top: 0; } }
+        top: 2rem;
+        left: 0; } }
 
 .grappa__container {
   width: 100vw;
@@ -1335,7 +1353,8 @@ a[href^="tel"] {
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: repeat(3, 0.7fr); }
+  grid-template-rows: repeat(3, 0.7fr);
+  overflow: hidden; }
 
 .menu-content {
   width: 100vw;
@@ -1352,7 +1371,7 @@ a[href^="tel"] {
       display: block; } }
 
 .mobile__footer {
-  width: 100vw;
+  max-width: 100vw;
   height: 10vh;
   position: relative; }
   @media only screen and (min-width: 56.25em) {

@@ -17,6 +17,7 @@
 
   @include respond(desktop) {
     max-width: 174rem;
+    padding-left: 6rem;
   }
 
   &-img {
@@ -61,7 +62,7 @@
       width: 80%;
       position: relative;
       top: -12rem;
-      left: 5rem;
+      left: 7rem;
     }
   }
 
@@ -73,6 +74,7 @@
 
     @include respond(tab-port) {
       flex: 1;
+      padding: 0;
     }
 
     @include respond(tab-land) {
