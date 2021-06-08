@@ -15,7 +15,7 @@
   display: block;
   opacity: 0;
   transition: all 0.5s ease;
-  overflow: hidden;
+  //overflow: hidden;
 
   @include respond(tab-port) {
     bottom: 24rem;
